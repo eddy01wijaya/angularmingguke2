@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (submit)="onSubmit(form)">
+        <div class="form-group mb-3">
+          <label>Document</label>
+          <input
+            #file
+            type="file"
+            (change)="upload($event)"
+            class="form-control"
+            ngModel
+            name="file"
+          />
+        </div>
+        <button type="submit">Upload</button>
+      </form>
+      {{ doc | json }}
+      {{ file.files | json }}
+    </div>
+  </div>
+</div>

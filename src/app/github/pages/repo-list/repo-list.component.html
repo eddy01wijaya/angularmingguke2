@@ -1,0 +1,18 @@
+<h1>List Of Repos</h1>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let repository of repositories">
+        <td>{{ repository.id }}</td>
+        <td>{{ repository.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
